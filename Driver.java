@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Driver{
     public static void main(String[]args){
-	String s="";
+	/*String s="";
 	String d="";
 	Scanner sc = new Scanner(System.in);
 	System.out.println("A knight clad in black stands in your way.");
@@ -12,6 +12,12 @@ public class Driver{
 	d=sc.nextLine();
 	System.out.println(s);
 	System.out.println(d);
+	*/
+	Warrior x = new Warrior();
+	baseChar y= new baseChar();
+	System.out.println(x.getHealth());
+	y.attacking(x);
+	System.out.println(x.getHealth());
 
     }
 }

@@ -13,13 +13,16 @@ public class baseChar{
 	// of hit. defense negates some damage.
 	Random rand = new Random();
 	int n = rand.nextInt(attack+2)+attack-2;
-	System.out.println(n);
+	other.changeHealth(-n);
     }
-    public int this.getHealth(){
+    public int getHealth(){
 	return this.Health;
     }
-    public void this.changeHealth(int value){
+    public void changeHealth(int value){
 	this.Health = this.Health+value;
+    }
+    public void usePotion(){
+	this.Health=this.Health+50;
     }
 
 }
