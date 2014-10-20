@@ -15,6 +15,13 @@ public class baseChar{
 	int n = rand.nextInt(attack+2)+attack-2;
 	System.out.println(n);
     }
+    public int this.getHealth(){
+	return this.Health;
+    }
+    public void this.changeHealth(int value){
+	this.Health = this.Health+value;
+    }
+
 }
 
 
