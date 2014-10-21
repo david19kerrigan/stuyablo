@@ -13,8 +13,8 @@ public class Driver{
 	System.out.println(s);
 	System.out.println(d);
 	*/
-	Warrior x = new Warrior();
-	baseChar y= new baseChar();
+	Warrior x = new Warrior("david");
+	baseChar y= new baseChar("javis");
 	System.out.println(x.getHealth());
 	y.attacking(x);
 	System.out.println(x.getHealth());
