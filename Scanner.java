@@ -11,17 +11,33 @@ public class Driver{
 	job=sc.nextLine();
 	if (job.equals("Warrior")){
 	    System.out.println("You are a Warrior.");
+	    //    Warrior player = new Warrior();
 	    }
 	if (job.equals("Mage")){
 	    System.out.println("You are a Mage.");
+	    //   Mage player = new Mage();
 	}
 	//Assuming the player does not type in an invalid class.
 	//Case sensitive
 	System.out.println("A knight clad in black stands in your way.");
-	s=sc.nextLine();
+	try {
+	    Thread.sleep(1000);
+	}catch(Exception e){}
 	System.out.println("None shall pass, he says.");
-	d=sc.nextLine();
-	System.out.println("I move for no man, says the knight.");
+	try {
+	    Thread.sleep(1000);
+	}catch(Exception e){}
+	System.out.println("Do you fight him or run?(fight/run)");
+	s=sc.nextLine();
+	
+	if (s.equals("fight")){
+	    System.out.println("What do you want to do?");
+		//list moves here, method of class
+	}
+	if (s.equals("run")){
+	    System.out.println("You run away with your tail between your legs.");
+	}
+	
 
     }
 }
