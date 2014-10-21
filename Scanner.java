@@ -11,7 +11,8 @@ public class Driver{
 	job=sc.nextLine();
 	if (job.equals("Warrior")){
 	    System.out.println("You are a Warrior.");
-	    //    Warrior player = new Warrior();
+	    name=sc.nextLine();
+	    Warrior player = new Warrior(name);
 	    }
 	if (job.equals("Mage")){
 	    System.out.println("You are a Mage.");
