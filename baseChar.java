@@ -19,7 +19,7 @@ public class baseChar{
     public Boolean runAway(){
 	//0-9
 	Random a = new Random();
-	int chance=a.nextInt(9);
+	int chance=a.nextInt(10);
 	if (chance<dexterity){
 	    return true;
 		}
