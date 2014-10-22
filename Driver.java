@@ -39,12 +39,24 @@ public class Driver{
 	s=sc.nextLine();
 	
 	if (s.equals("fight")){
-	    /* while((knight.getHealth)>0){
-	    System.out.println("What do you want to do?");
+	    while(knight.getHealth()>0){
+	    	System.out.println("What do you want to do?");
+		System.out.println("0 for potion 1 for attack");
 		//list moves here, method of class
 		
 	        
-		s = sc.nextLine(); */ 
+		int n1 = sc.nextInt();
+	      	if(n1==0){
+			player.usePotion();
+		}
+		else{
+			player.attacking(knight);
+		}
+		System.out.println("your health: "+player.getHealth());
+		System.out.println("his health: "+knight.getHealth());
+
+	    }
+	    	
 	    //System.out.println(player+" gets ready.");
 	}
 	if (s.equals("run")){
