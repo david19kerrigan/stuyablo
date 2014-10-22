@@ -27,7 +27,7 @@ public class Driver{
 	//Assuming the player does not type in an invalid class.
 	//Case sensitive
 	System.out.println("A knight clad in black stands in your way.");
-	Warrior knight = new Warrior("bad dude");
+	Warrior knight = new Warrior("Black Knight");
 	try {
 	    Thread.sleep(1000);
 	}catch(Exception e){}
@@ -40,7 +40,9 @@ public class Driver{
 	
 
 	if (s.equals("fight")){
-	    while(knight.getHealth()>=0 || player.getHealth()>=0){
+	    while(knight.getHealth()>0){
+		
+		
 	    	System.out.println("What do you want to do?");
 		System.out.println("0 for potion 1 for attack");
 		//list moves here, method of class
@@ -49,6 +51,7 @@ public class Driver{
 		int n1 = sc.nextInt();
 	      	if(n1==0){
 			player.usePotion();
+			System.out.println(player+" regains 10 health");
 		}
 		else{
 			player.attacking(knight);
@@ -56,7 +59,18 @@ public class Driver{
 		knight.attacking(player);
 		System.out.println("your health: "+player.getHealth());
 		System.out.println("his health: "+knight.getHealth());
-
+		if (player.getHealth()<=0 && knight.getHealth()<=0){
+		    System.out.println("Both combatants fall.");
+			}
+		if (knight.getHealth()<=0){
+		    System.out.println(player+" has slain the black knight");
+		}
+		if (player.getHealth()<=0){
+		   
+		    System.out.println("The black knight has slain "+player);
+		    knight.setHealth(-1);
+			}
+		
 	    }
 	    	
 	    //System.out.println(player+" gets ready.");
@@ -67,7 +81,7 @@ public class Driver{
 	    }
 	    else{
 		System.out.println("You fail to run, fool. Fight.");
-		while(knight.getHealth()>=0 || player.getHealth()>=0){
+		while(knight.getHealth()>0 || player.getHealth()>0){
 	    	System.out.println("What do you want to do?");
 		System.out.println("0 for potion 1 for attack");
 		//list moves here, method of class

@@ -8,10 +8,10 @@ public class Mage extends baseChar{
     // private int dexterity=4;
     public Mage(String name){
     	super(name);
-	setHealth(35);
+	setHealth(20);
 	setDex(4);
-	setAttack(10);
-	setDef(4);
+	setAttack(3);
+	setDef(2);
     }
     /* public Boolean runAway(){
 	//0-9
