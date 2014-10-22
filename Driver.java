@@ -38,8 +38,9 @@ public class Driver{
 	System.out.println("Do you fight him or run?(fight/run)");
 	s=sc.nextLine();
 	
+
 	if (s.equals("fight")){
-	    while(knight.getHealth()>0){
+	    while(knight.getHealth()>=0 || player.getHealth()>=0){
 	    	System.out.println("What do you want to do?");
 		System.out.println("0 for potion 1 for attack");
 		//list moves here, method of class
@@ -52,6 +53,7 @@ public class Driver{
 		else{
 			player.attacking(knight);
 		}
+		knight.attacking(player);
 		System.out.println("your health: "+player.getHealth());
 		System.out.println("his health: "+knight.getHealth());
 
@@ -65,7 +67,27 @@ public class Driver{
 	    }
 	    else{
 		System.out.println("You fail to run, fool. Fight.");
-		    }
+		while(knight.getHealth()>=0 || player.getHealth()>=0){
+	    	System.out.println("What do you want to do?");
+		System.out.println("0 for potion 1 for attack");
+		//list moves here, method of class
+		
+	        
+		int n1 = sc.nextInt();
+	      	if(n1==0){
+			player.usePotion();
+		}
+		else{
+			player.attacking(knight);
+		}
+		knight.attacking(player);
+		System.out.println("your health: "+player.getHealth());
+		System.out.println("his health: "+knight.getHealth());
+
+	    }
+	    	
+	    //System.out.println(player+" gets ready.");
+	    }
 	}
 	
 	

@@ -52,8 +52,11 @@ public class Driver{
 		else{
 			player.attacking(knight);
 		}
+		System.out.println("your health: "+player.getHealth());
+		System.out.println("his health: "+knight.getHealth());
+
 	    }
-				
+	    	
 	    //System.out.println(player+" gets ready.");
 	}
 	if (s.equals("run")){
