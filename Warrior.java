@@ -5,4 +5,5 @@ public class Warrior extends baseChar{
     public Warrior(String name){
     	super(name);
     }
+    
 }

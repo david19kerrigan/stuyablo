@@ -16,6 +16,16 @@ public class baseChar{
     public String toString(){
 	return name;
     }
+    public Boolean runAway(){
+	//0-9
+	Random a = new Random();
+	int chance=a.nextInt(9);
+	if (chance<dexterity){
+	    return true;
+		}
+	else 
+	    return false;
+    }
     public void attacking(baseChar other){
 	//consider this basechar's attack and dexterity and the other basechar's
 	// defense. range of attack damage is +-2. dexterity determines chance
