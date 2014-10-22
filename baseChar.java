@@ -5,6 +5,7 @@ public class baseChar{
     private int attack=5;
     private int defense=2;
     private int dexterity=5;
+    private int mana=0;
     public baseChar(String s){
     	name = s;
      }
@@ -24,6 +25,15 @@ public class baseChar{
 		}
 	else 
 	    return false;
+    }
+    public void spell(baseChar other){
+	Random magic = new Random();
+	int x=2+magic.nextInt(mana);
+	if(x<0){
+	    x=0;
+	}
+	other.changeHealth(-x);
+	System.out.println(this+" casts spell on "+other+" for "+x);
     }
     public void attacking(baseChar other){
 	//consider this basechar's attack and dexterity and the other basechar's
@@ -59,6 +69,9 @@ public class baseChar{
     }
     public void setDef(int d){
 	this.defense=d;
+    }
+    public void setMana(int m){
+	this.mana=m;
     }
 
 }

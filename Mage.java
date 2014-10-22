@@ -10,8 +10,9 @@ public class Mage extends baseChar{
     	super(name);
 	setHealth(20);
 	setDex(4);
-	setAttack(3);
+	setAttack(4);
 	setDef(2);
+	setMana(7);
     }
     /* public Boolean runAway(){
 	//0-9

@@ -9,9 +9,10 @@ public class Warrior extends baseChar{
     public Warrior(String name){
     	super(name);
 	setHealth(35);
-	setDex(0);
+	setDex(2);
 	setAttack(10);
 	setDef(4);
+	setMana(1);
     }
     /* public Boolean runAway(){
 	//0-9
