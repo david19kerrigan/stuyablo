@@ -48,6 +48,18 @@ public class baseChar{
     public void usePotion(){
 	this.Health=this.Health+10;
     }
+    public void setHealth(int x){
+	this.Health=x;
+    }
+    public void setDex(int y){
+	this.dexterity=y;
+	    }
+    public void setAttack(int z){
+	this.attack=z;
+    }
+    public void setDef(int d){
+	this.defense=d;
+    }
 
 }
 
