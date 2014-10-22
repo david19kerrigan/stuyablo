@@ -18,5 +18,7 @@ public class Warrior extends baseChar{
 	else 
 	    return false;
     }
-    
+    public int getHealth(){
+	return this.Health;
+    }
 }

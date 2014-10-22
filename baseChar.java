@@ -5,7 +5,6 @@ public class baseChar{
     private int attack=5;
     private int defense=2;
     private int dexterity=5;
-    private int mana=0;
     public baseChar(String s){
     	name = s;
      }
@@ -47,7 +46,7 @@ public class baseChar{
 	this.Health = this.Health+value;
     }
     public void usePotion(){
-	this.Health=this.Health+50;
+	this.Health=this.Health+10;
     }
 
 }
